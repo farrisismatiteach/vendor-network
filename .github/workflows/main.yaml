@@ -109,7 +109,7 @@ jobs:
       - name: Terraform Apply
         id: apply
         working-directory: ./terraform
-        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-        run: terraform apple
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: terraform apply -auto-approve -input=false
         env:
           TF_VAR_aws_region: ${{ secrets.AWS_REGION }}
