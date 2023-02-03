@@ -2,7 +2,7 @@ variable "aws_region" {}
 
 variable "app_name" {
     description = "Name of the app"
-    default = "vendor-network"
+    default = "vendor-course"
 }
 
 variable "public_subnets" {
